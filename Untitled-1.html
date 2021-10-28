@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Login</title>
+    <script>
+      function loginOnClick() {
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pwd").value;
+        if (name == "" || pass == "") {
+          alert("Username or Password cannot be empty");
+        } else {
+          alert("Login Succesful");
+        }
+      }
+    </script>
+    <style>
+      .loginStyle {
+        margin-top: 45px;
+        width: auto;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="loginStyle">
+      <fieldset align="center">
+        <legend align="center">Login Form</legend>
+        <input
+          type="email"
+          placeholder="Username"
+          id="name"
+          required
+          autofocus
+        /><br />
+        <br />
+        <input type="password" placeholder="Password" id="pwd" required /><br />
+        <br />
+        <input type="submit" onclick="loginOnClick()" name="Login" />
+      </fieldset>
+    </form>
+  </body>
+</html>
